@@ -1,10 +1,10 @@
 body {
-    background-color: skyblue;
+    background-color:#559375;
 }
 #header-div{
     height: 150px;
     align-items: flex-start;
-    background-color:rgb(84, 157, 186);
+    background-color: #325343;
     text-align: center;
     border-radius: 15px;
     border-style: solid;
@@ -21,7 +21,7 @@ body {
 
 #nav-btns {
     text-align: right;
-    background-color: skyblue;
+    background-color: #559375;
     
 }
 
@@ -30,7 +30,7 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-color: black;
-    background-color: rgb(84, 157, 186);
+    background-color: #325343;
     text-decoration: double;
     font-size: large;
     color: black;

@@ -1,0 +1,56 @@
+body {
+    background-color: skyblue;
+}
+#header-div{
+    height: 150px;
+    align-items: flex-start;
+    background-color:rgb(84, 157, 186);
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#header-image {
+    height: 100px;
+    align-self: auto;
+}
+
+#nav-btns {
+    text-align: right;
+    background-color: skyblue;
+    
+}
+
+#login-btn, #about-btn{
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(84, 157, 186);
+    text-decoration: double;
+    font-size: large;
+    color: black;
+    
+}
+
+#login-page {
+    width: flex;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    font-size: larger;
+    text-align: center;
+    margin-top: 10%;
+    background-color: rgb(84, 157, 186);
+    border-radius: 15px;
+    margin-left: flex;
+    margin-right: flex;
+
+
+}

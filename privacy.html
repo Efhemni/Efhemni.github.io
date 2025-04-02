@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Efhemni!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Efhemni!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" id="registerLink">Register</a></li>
+                <li><a href="login.html" id="loginLink">Login</a></li>
+                <li><button id="logoutButton" style="display:none;">Logout</button></li>
+                <li><span id="userNameDisplay"></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Privacy Policy</h2>
+
+        <p>At Efhemni, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, and protect your data when you use our services.</p>
+
+        <h3>1. Information We Collect</h3>
+        <p>When you register for an account or use the Efhemni website, we may collect the following information:</p>
+        <ul>
+            <li><strong>Personal Identification Information:</strong> Name, email address, username, and password.</li>
+            <li><strong>Usage Data:</strong> Information about how you interact with the website, including pages visited and actions taken.</li>
+            <li><strong>Payment Information:</strong> If you book a session, we may collect payment details (processed through a third-party payment gateway).</li>
+        </ul>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the information we collect to:</p>
+        <ul>
+            <li>Provide and improve our services.</li>
+            <li>Authenticate users and allow login.</li>
+            <li>Respond to inquiries and support requests.</li>
+            <li>Process payments for booked sessions.</li>
+            <li>Send promotional materials or updates about Efhemni (if you opt-in to receive them).</li>
+        </ul>
+
+        <h3>3. Data Security</h3>
+        <p>We take reasonable measures to protect your personal data from unauthorized access, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+        <h3>4. Your Rights</h3>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access and update your personal information.</li>
+            <li>Request deletion of your account and personal data (subject to legal obligations).</li>
+            <li>Opt-out of promotional emails or newsletters at any time.</li>
+        </ul>
+
+        <h3>5. Third-Party Services</h3>
+        <p>We may use third-party services, such as payment processors and analytics tools, which may collect and use data in accordance with their privacy policies. We do not control these third-party services, and we encourage you to review their privacy policies.</p>
+
+        <h3>6. Changes to This Privacy Policy</h3>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated "Effective Date." Please review this page periodically for updates.</p>
+
+        <h3>7. Contact Us</h3>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:efhemni.business@gmail.com">efhemni.business@gmail.com</a></p>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCnEy0573ApuGtomfnjSzbsph60xfHmWqY",
+          authDomain: "efhemni-95182.firebaseapp.com",
+          projectId: "efhemni-95182",
+          storageBucket: "efhemni-95182.firebasestorage.app",
+          messagingSenderId: "309642233749",
+          appId: "1:309642233749:web:f5cb8a8817c3974ebed89c",
+          measurementId: "G-RY4D4GS2PX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>

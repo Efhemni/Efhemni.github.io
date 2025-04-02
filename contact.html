@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Efhemni!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Efhemni!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" id="registerLink">Register</a></li>
+                <li><a href="login.html" id="loginLink">Login</a></li>
+                <li><button id="logoutButton" style="display:none;">Logout</button></li>
+                <li><span id="userNameDisplay"></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+        <p>If you have any concerns, questions, or feedback, feel free to reach out to us via email. We value your input and are here to assist you with any inquiries.</p>
+
+        <h3>Email Us:</h3>
+        <p>You can send an email directly to <a href="mailto:efhemni.business@gmail.com">efhemni.business@gmail.com</a> for any concerns or queries regarding the platform.</p>
+
+        <h3>Our Team</h3>
+        <p>We have a dedicated team of professionals who are available to answer your questions. Whether you're seeking technical support or mental health resources, we're here to help.</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCnEy0573ApuGtomfnjSzbsph60xfHmWqY",
+          authDomain: "efhemni-95182.firebaseapp.com",
+          projectId: "efhemni-95182",
+          storageBucket: "efhemni-95182.firebasestorage.app",
+          messagingSenderId: "309642233749",
+          appId: "1:309642233749:web:f5cb8a8817c3974ebed89c",
+          measurementId: "G-RY4D4GS2PX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>

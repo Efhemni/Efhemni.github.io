@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Efhemni!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Efhemni!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" id="registerLink">Register</a></li>
+                <li><a href="login.html" id="loginLink">Login</a></li>
+                <li><button id="logoutButton" style="display:none;">Logout</button></li>
+                <li><span id="userNameDisplay"></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to Efhemni!</h2>
+        <p>Efhemni is a platform dedicated to the mental well-being of university students. We offer a safe, anonymous space to share concerns or create an account to engage with others in a supportive community. University life can be overwhelming, and Efhemni is here to help you navigate your emotional and mental health challenges.</p>
+
+        <h3>Our Mission</h3>
+        <p>Our mission is to reduce the stigma surrounding mental health among university students by offering a platform where students can share their experiences, seek help, and find support. We aim to create a compassionate and understanding community where students feel safe, heard, and empowered to take care of their mental well-being.</p>
+
+        <h3>Why Efhemni?</h3>
+        <p>Efhemni was created with the understanding that many students face mental health challenges during their studies. From stress and anxiety to depression and isolation, university life can take a toll. Efhemni provides a platform where students can find emotional support, connect with others, and get the help they need.</p>
+
+        <h3>Our Services</h3>
+        <ul>
+            <li><strong>Anonymous Posting:</strong> You can anonymously share your thoughts, struggles, and experiences with the Efhemni community without revealing your identity.</li>
+            <li><strong>Account Creation:</strong> For a more personalized experience, you can create an account to connect with others, participate in discussions, and track your mental health journey.</li>
+            <li><strong>Online Psychiatrist Sessions:</strong> Efhemni offers one-on-one sessions with experienced psychiatrists who are available to help with mental health challenges. Each session is 30DT per hour, and you can book an appointment directly through our platform. Whether you're struggling with anxiety, stress, depression, or any other issue, our licensed professionals are here to assist you.</li>
+            <li><strong>Mental Health Resources:</strong> We provide valuable articles, tips, and resources to help you better understand and manage your mental health.</li>
+        </ul>
+
+        <h3>Book a Session with a Psychiatrist</h3>
+        <p>If you're looking for professional help, Efhemni allows you to book a session with a licensed psychiatrist. The cost is 30DT per hour. Sessions are available online, making it easier than ever to seek help from the comfort of your home. You can choose a psychiatrist based on your specific needs, and the available times will be displayed during the booking process.</p>
+
+        <h3>How to Get Started</h3>
+        <p>Getting started on Efhemni is easy. You can create an account, or if you prefer, you can post anonymously. Once you're a member, you can start connecting with others, join the community discussions, and access the mental health resources. If you need professional help, you can book an online session with a psychiatrist directly through our platform.</p>
+
+        <h3>Join Us Today!</h3>
+        <p>Efhemni is here to provide the support and understanding you need during your time in university. Whether you're struggling with stress, anxiety, depression, or just need someone to talk to, we invite you to join the community and take charge of your mental health. Together, we can break the stigma surrounding mental health and help each other thrive!</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCnEy0573ApuGtomfnjSzbsph60xfHmWqY",
+          authDomain: "efhemni-95182.firebaseapp.com",
+          projectId: "efhemni-95182",
+          storageBucket: "efhemni-95182.firebasestorage.app",
+          messagingSenderId: "309642233749",
+          appId: "1:309642233749:web:f5cb8a8817c3974ebed89c",
+          measurementId: "G-RY4D4GS2PX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>

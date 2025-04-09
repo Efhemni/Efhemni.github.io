@@ -8,7 +8,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+    <div class="translation-buttons">
+        <button id="translateToArabic">العربية</button>
+        <button id="translateToFrench">Français</button>
+        <button id="translateToEnglish">English</button>
+    </div>
     <header>
         <h1>Efhemni!</h1>
         <nav>
@@ -26,50 +30,134 @@
     </header>
 
     <main>
-        <h2>Welcome to Efhemni!</h2>
-        <p>Efhemni is a platform for university students to share concerns, connect with others, and access mental health resources in a safe, supportive environment.</p>
+        <h2 id="welcome">Welcome to Efhemni!</h2>
+        <p id="intro">Efhemni is a platform for university students to share concerns, connect with others, and access mental health resources in a safe, supportive environment.</p>
 
         <section>
-            <h3>Our Mission</h3>
-            <p>We aim to reduce the stigma around mental health by fostering a compassionate community where students feel safe and empowered.</p>
+            <h3 id="missionTitle">Our Mission</h3>
+            <p id="missionText">We aim to reduce the stigma around mental health by fostering a compassionate community where students feel safe and empowered.</p>
         </section>
 
         <section>
-            <h3>Why Choose Efhemni?</h3>
-            <p>University life can be challenging. Efhemni provides emotional support, connections, and professional help to navigate these challenges.</p>
+            <h3 id="whyTitle">Why Choose Efhemni?</h3>
+            <p id="whyText">University life can be challenging. Efhemni provides emotional support, connections, and professional help to navigate these challenges.</p>
         </section>
 
         <section>
-            <h3>Our Services</h3>
+            <h3 id="servicesTitle">Our Services</h3>
             <ul>
-                <li><strong>Anonymous Posting:</strong><br> Share your thoughts and struggles without revealing your identity.</li><br>
-                <li><strong>Account Creation:</strong><br> Connect with others and track your mental health journey.</li><br>
-                <li><strong>Online Psychiatrist Sessions:</strong><br> Book one-on-one sessions with licensed professionals for 30DT/hour.</li><br>
-                <li><strong>Mental Health Resources:</strong> Access articles, tips, and tools to manage your mental health.</li><br>
+                <li id="service1"><strong>Anonymous Posting:</strong> Share your thoughts and struggles without revealing your identity.</li>
+                <li id="service2"><strong>Account Creation:</strong> Connect with others and track your mental health journey.</li>
+                <li id="service3"><strong>Online Psychiatrist Sessions:</strong> Book one-on-one sessions with licensed professionals for 30DT/hour.</li>
+                <li id="service4"><strong>Mental Health Resources:</strong> Access articles, tips, and tools to manage your mental health.</li>
             </ul>
         </section>
 
         <section>
-            <h3>Book a Session</h3>
-            <p>Book online sessions with licensed psychiatrists for 30DT/hour. Choose a psychiatrist and time that suits your needs.</p>
+            <h3 id="bookTitle">Book a Session</h3>
+            <p id="bookText">Book online sessions with licensed psychiatrists for 30DT/hour. Choose a psychiatrist and time that suits your needs.</p>
         </section>
 
         <section>
-            <h3>Get Started</h3>
-            <p>Create an account or post anonymously to join discussions, access resources, and book professional help.</p>
+            <h3 id="getStartedTitle">Get Started</h3>
+            <p id="getStartedText">Create an account or post anonymously to join discussions, access resources, and book professional help.</p>
         </section>
 
         <section>
-            <h3>Join Us Today!</h3>
-            <p>Take charge of your mental health. Join Efhemni to connect, share, and thrive in a supportive community.</p>
+            <h3 id="joinUsTitle">Join Us Today!</h3>
+            <p id="joinUsText">Take charge of your mental health. Join Efhemni to connect, share, and thrive in a supportive community.</p>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const translations = {
+            ar: {
+                welcome: "مرحبًا بك في إفهمني!",
+                intro: "إفهمني هو منصة مخصصة لطلاب الجامعات لمشاركة مخاوفهم، والتواصل مع الآخرين، والوصول إلى موارد الصحة النفسية في بيئة آمنة وداعمة.",
+                missionTitle: "مهمتنا",
+                missionText: "نهدف إلى تقليل الوصمة المرتبطة بالصحة النفسية من خلال بناء مجتمع متعاطف يشعر فيه الطلاب بالأمان والتمكين.",
+                whyTitle: "لماذا تختار إفهمني؟",
+                whyText: "يمكن أن تكون الحياة الجامعية مليئة بالتحديات. يوفر إفهمني الدعم العاطفي والاتصالات والمساعدة المهنية لتجاوز هذه التحديات.",
+                servicesTitle: "خدماتنا",
+                service1: "النشر المجهول: شارك أفكارك وصراعاتك دون الكشف عن هويتك.",
+                service2: "إنشاء حساب: تواصل مع الآخرين وتابع رحلتك في الصحة النفسية.",
+                service3: "جلسات طبيب نفسي عبر الإنترنت: احجز جلسات فردية مع محترفين مرخصين مقابل 30 دينار/ساعة.",
+                service4: "موارد الصحة النفسية: احصل على مقالات ونصائح وأدوات لإدارة صحتك النفسية.",
+                bookTitle: "احجز جلسة",
+                bookText: "احجز جلسات عبر الإنترنت مع أطباء نفسيين مرخصين مقابل 30 دينار/ساعة. اختر الطبيب والوقت المناسبين.",
+                getStartedTitle: "ابدأ الآن",
+                getStartedText: "أنشئ حسابًا أو انشر بشكل مجهول للانضمام إلى المناقشات والوصول إلى الموارد وحجز المساعدة المهنية.",
+                joinUsTitle: "انضم إلينا اليوم!",
+                joinUsText: "تحكم في صحتك النفسية. انضم إلى إفهمني للتواصل والمشاركة والازدهار في مجتمع داعم."
+            },
+            fr: {
+                welcome: "Bienvenue sur Efhemni!",
+                intro: "Efhemni est une plateforme pour les étudiants universitaires afin de partager leurs préoccupations, se connecter avec d'autres et accéder à des ressources en santé mentale dans un environnement sûr et solidaire.",
+                missionTitle: "Notre Mission",
+                missionText: "Nous visons à réduire la stigmatisation autour de la santé mentale en favorisant une communauté compatissante où les étudiants se sentent en sécurité et autonomes.",
+                whyTitle: "Pourquoi choisir Efhemni?",
+                whyText: "La vie universitaire peut être difficile. Efhemni offre un soutien émotionnel, des connexions et une aide professionnelle pour surmonter ces défis.",
+                servicesTitle: "Nos Services",
+                service1: "Publication anonyme : Partagez vos pensées et vos luttes sans révéler votre identité.",
+                service2: "Création de compte : Connectez-vous avec d'autres et suivez votre parcours de santé mentale.",
+                service3: "Séances de psychiatre en ligne : Réservez des séances individuelles avec des professionnels agréés pour 30DT/heure.",
+                service4: "Ressources en santé mentale : Accédez à des articles, des conseils et des outils pour gérer votre santé mentale.",
+                bookTitle: "Réservez une séance",
+                bookText: "Réservez des séances en ligne avec des psychiatres agréés pour 30DT/heure. Choisissez un psychiatre et un horaire qui vous conviennent.",
+                getStartedTitle: "Commencez maintenant",
+                getStartedText: "Créez un compte ou publiez anonymement pour rejoindre des discussions, accéder à des ressources et réserver une aide professionnelle.",
+                joinUsTitle: "Rejoignez-nous aujourd'hui!",
+                joinUsText: "Prenez en charge votre santé mentale. Rejoignez Efhemni pour vous connecter, partager et prospérer dans une communauté solidaire."
+            },
+            en: {
+                welcome: "Welcome to Efhemni!",
+                intro: "Efhemni is a platform for university students to share concerns, connect with others, and access mental health resources in a safe, supportive environment.",
+                missionTitle: "Our Mission",
+                missionText: "We aim to reduce the stigma around mental health by fostering a compassionate community where students feel safe and empowered.",
+                whyTitle: "Why Choose Efhemni?",
+                whyText: "University life can be challenging. Efhemni provides emotional support, connections, and professional help to navigate these challenges.",
+                servicesTitle: "Our Services",
+                service1: "Anonymous Posting: Share your thoughts and struggles without revealing your identity.",
+                service2: "Account Creation: Connect with others and track your mental health journey.",
+                service3: "Online Psychiatrist Sessions: Book one-on-one sessions with licensed professionals for 30DT/hour.",
+                service4: "Mental Health Resources: Access articles, tips, and tools to manage your mental health.",
+                bookTitle: "Book a Session",
+                bookText: "Book online sessions with licensed psychiatrists for 30DT/hour. Choose a psychiatrist and time that suits your needs.",
+                getStartedTitle: "Get Started",
+                getStartedText: "Create an account or post anonymously to join discussions, access resources, and book professional help.",
+                joinUsTitle: "Join Us Today!",
+                joinUsText: "Take charge of your mental health. Join Efhemni to connect, share, and thrive in a supportive community."
+            }
+        };
+
+        document.getElementById("translateToArabic").addEventListener("click", () => translatePage("ar"));
+        document.getElementById("translateToFrench").addEventListener("click", () => translatePage("fr"));
+        document.getElementById("translateToEnglish").addEventListener("click", () => translatePage("en"));
+
+        function translatePage(lang) {
+            document.getElementById("welcome").textContent = translations[lang].welcome;
+            document.getElementById("intro").textContent = translations[lang].intro;
+            document.getElementById("missionTitle").textContent = translations[lang].missionTitle;
+            document.getElementById("missionText").textContent = translations[lang].missionText;
+            document.getElementById("whyTitle").textContent = translations[lang].whyTitle;
+            document.getElementById("whyText").textContent = translations[lang].whyText;
+            document.getElementById("servicesTitle").textContent = translations[lang].servicesTitle;
+            document.getElementById("service1").textContent = translations[lang].service1;
+            document.getElementById("service2").textContent = translations[lang].service2;
+            document.getElementById("service3").textContent = translations[lang].service3;
+            document.getElementById("service4").textContent = translations[lang].service4;
+            document.getElementById("bookTitle").textContent = translations[lang].bookTitle;
+            document.getElementById("bookText").textContent = translations[lang].bookText;
+            document.getElementById("getStartedTitle").textContent = translations[lang].getStartedTitle;
+            document.getElementById("getStartedText").textContent = translations[lang].getStartedText;
+            document.getElementById("joinUsTitle").textContent = translations[lang].joinUsTitle;
+            document.getElementById("joinUsText").textContent = translations[lang].joinUsText;
+        }
+    </script>
 
 </body>
 </html>

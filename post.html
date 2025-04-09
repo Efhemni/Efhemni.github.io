@@ -25,36 +25,153 @@
     </header>
 
     <main>
-        <h2>Community Posts</h2>
-        <div id="postsSection">
-            <h3>Previous Posts</h3>
-            <div class="post">
-                <p><strong>Anonymous:</strong> I'm feeling overwhelmed with exams. Any tips to manage stress?</p>
-            </div>
-            <div class="post">
-                <p><strong>Sarah:</strong> Remember to take breaks and stay hydrated. You can do this!</p>
-            </div>
-            <div class="post">
-                <p><strong>Ahmed:</strong> Meditation has helped me a lot. Try it out!</p>
-            </div>
-        </div>
+        <h2 id="postTitle">Community Posts</h2>
 
-        <h3>Share Your Thoughts</h3>
+        <h3 id="shareThoughtsTitle">Share Your Thoughts</h3>
         <form id="postForm">
-            <label for="username">Name (optional):</label>
+            <label for="username" id="usernameLabel">Name (optional):</label>
             <input type="text" id="username" name="username" placeholder="Enter your name (or leave blank for anonymous)">
             
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+            <label for="message" id="messageLabel">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required style="resize: none;"></textarea>
             
-            <button type="submit">Post</button>
+            <button type="submit" id="postButton">Post</button>
         </form>
+
+        <div id="postsSection">
+            <h3 id="previousPostsTitle">Previous Posts</h3>
+            <div class="post">
+                <p class="postText"><strong>Anonymous:</strong> I'm feeling overwhelmed with exams. Any tips to manage stress?</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Amira:</strong> Try taking short breaks and drinking water. It helps!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Youssef:</strong> How do you stay motivated when studying for long hours?</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Fatma:</strong> I set small goals and reward myself after completing each one.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Karim:</strong> What are some effective ways to improve focus while studying?</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Hassan:</strong> Try the Pomodoro technique. It works wonders for me!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Fatma:</strong> Talking to a friend or family member can make a big difference. Don't keep it all inside.</p>
+                <div class="replies"></div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Ali:</strong> I recommend using a planner to organize your study schedule. It really helps!</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Salma:</strong> I started using a planner last week, and it’s been a game changer!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Rania:</strong> What are some good ways to relax after a long day of studying?</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Omar:</strong> I like to listen to music or take a walk in the park.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Hassan:</strong> Group study sessions can be very effective. Share ideas with friends!</p>
+                <div class="replies"></div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Anonymous:</strong> How do you deal with procrastination?</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Ahmed:</strong> Start with the easiest task to build momentum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <p class="postText"><strong>Leila:</strong> What are some healthy snacks to eat while studying?</p>
+                <div class="replies">
+                    <div class="reply">
+                        <p>↳ <strong>Fatma:</strong> I love eating nuts and fruits. They keep me energized!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("postForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById("username").value.trim();
+            const messageInput = document.getElementById("message").value.trim();
+
+            if (messageInput) {
+                const postsSection = document.getElementById("postsSection");
+
+                const postDiv = document.createElement("div");
+                postDiv.classList.add("post");
+                postDiv.innerHTML = `
+                    <p class="postText"><strong>${usernameInput || "Anonymous"}:</strong> ${messageInput}</p>
+                    <div class="replies"></div>
+                `;
+
+                postsSection.insertBefore(postDiv, postsSection.querySelector(".post"));
+                attachReplyFunctionality(postDiv.querySelector(".postText"));
+
+                document.getElementById("username").value = "";
+                document.getElementById("message").value = "";
+            }
+        });
+
+        document.querySelectorAll(".postText").forEach(postText => attachReplyFunctionality(postText));
+
+        function attachReplyFunctionality(postText) {
+            postText.addEventListener("click", function () {
+                const repliesContainer = postText.nextElementSibling;
+
+                const existingReplyForm = document.querySelector(".replyForm");
+                if (existingReplyForm) {
+                    existingReplyForm.remove();
+                }
+
+                const replyDiv = document.createElement("div");
+                replyDiv.classList.add("replyForm");
+                replyDiv.innerHTML = `
+                    <input type="text" class="replyUsername" placeholder="Your name (optional)">
+                    <textarea class="replyMessage" rows="2" placeholder="Type your reply here..." required style="resize: none;"></textarea>
+                    <button class="submitReplyButton">Submit Reply</button>
+                `;
+
+                repliesContainer.appendChild(replyDiv);
+
+                replyDiv.querySelector(".submitReplyButton").addEventListener("click", function () {
+                    const replyUsername = replyDiv.querySelector(".replyUsername").value.trim();
+                    const replyMessage = replyDiv.querySelector(".replyMessage").value.trim();
+
+                    if (replyMessage) {
+                        const replyContent = document.createElement("div");
+                        replyContent.classList.add("reply");
+                        replyContent.innerHTML = `<p>↳ <strong>${replyUsername || "Anonymous"}:</strong> ${replyMessage}</p>`;
+
+                        repliesContainer.appendChild(replyContent);
+                        repliesContainer.removeChild(replyDiv);
+                    }
+                });
+            });
+        }
+    </script>
 </body>
 </html>

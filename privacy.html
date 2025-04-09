@@ -26,48 +26,48 @@
     </header>
 
     <main>
-        <h2>Privacy Policy</h2>
+        <h2 id="privacyTitle">Privacy Policy</h2>
 
-        <p>At Efhemni, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, and protect your data when you use our services.</p>
+        <p id="privacyIntro">At Efhemni, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, and protect your data when you use our services.</p>
 
-        <h3>1. Information We Collect</h3>
-        <p>When you register for an account or use the Efhemni website, we may collect the following information:</p>
-        <ul>
-            <li><strong>Personal Identification Information:</strong> Name, email address, username, and password.</li>
-            <li><strong>Usage Data:</strong> Information about how you interact with the website, including pages visited and actions taken.</li>
-            <li><strong>Payment Information:</strong> If you book a session, we may collect payment details (processed through a third-party payment gateway).</li>
+        <h3 id="infoWeCollectTitle">1. Information We Collect</h3>
+        <p id="infoWeCollectIntro">When you register for an account or use the Efhemni website, we may collect the following information:</p>
+        <ul id="infoWeCollectList">
+            <li id="personalInfo"><strong>Personal Identification Information:</strong> Name, email address, username, and password.</li>
+            <li id="usageData"><strong>Usage Data:</strong> Information about how you interact with the website, including pages visited and actions taken.</li>
+            <li id="paymentInfo"><strong>Payment Information:</strong> If you book a session, we may collect payment details (processed through a third-party payment gateway).</li>
         </ul>
 
-        <h3>2. How We Use Your Information</h3>
-        <p>We use the information we collect to:</p>
-        <ul>
-            <li>Provide and improve our services.</li>
-            <li>Authenticate users and allow login.</li>
-            <li>Respond to inquiries and support requests.</li>
-            <li>Process payments for booked sessions.</li>
-            <li>Send promotional materials or updates about Efhemni (if you opt-in to receive them).</li>
+        <h3 id="howWeUseInfoTitle">2. How We Use Your Information</h3>
+        <p id="howWeUseInfoIntro">We use the information we collect to:</p>
+        <ul id="howWeUseInfoList">
+            <li id="provideServices">Provide and improve our services.</li>
+            <li id="authenticateUsers">Authenticate users and allow login.</li>
+            <li id="respondInquiries">Respond to inquiries and support requests.</li>
+            <li id="processPayments">Process payments for booked sessions.</li>
+            <li id="sendPromotions">Send promotional materials or updates about Efhemni (if you opt-in to receive them).</li>
         </ul>
 
-        <h3>3. Data Security</h3>
-        <p>We take reasonable measures to protect your personal data from unauthorized access, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+        <h3 id="dataSecurityTitle">3. Data Security</h3>
+        <p id="dataSecurityIntro">We take reasonable measures to protect your personal data from unauthorized access, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
 
-        <h3>4. Your Rights</h3>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access and update your personal information.</li>
-            <li>Request deletion of your account and personal data (subject to legal obligations).</li>
-            <li>Opt-out of promotional emails or newsletters at any time.</li>
+        <h3 id="yourRightsTitle">4. Your Rights</h3>
+        <p id="yourRightsIntro">You have the right to:</p>
+        <ul id="yourRightsList">
+            <li id="accessUpdateInfo">Access and update your personal information.</li>
+            <li id="requestDeletion">Request deletion of your account and personal data (subject to legal obligations).</li>
+            <li id="optOutPromotions">Opt-out of promotional emails or newsletters at any time.</li>
         </ul>
 
-        <h3>5. Third-Party Services</h3>
-        <p>We may use third-party services, such as payment processors and analytics tools, which may collect and use data in accordance with their privacy policies. We do not control these third-party services, and we encourage you to review their privacy policies.</p>
+        <h3 id="thirdPartyServicesTitle">5. Third-Party Services</h3>
+        <p id="thirdPartyServicesIntro">We may use third-party services, such as payment processors and analytics tools, which may collect and use data in accordance with their privacy policies. We do not control these third-party services, and we encourage you to review their privacy policies.</p>
 
-        <h3>6. Changes to This Privacy Policy</h3>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated "Effective Date." Please review this page periodically for updates.</p>
+        <h3 id="changesPolicyTitle">6. Changes to This Privacy Policy</h3>
+        <p id="changesPolicyIntro">We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated "Effective Date." Please review this page periodically for updates.</p>
 
-        <h3>7. Contact Us</h3>
-        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:efhemni.business@gmail.com">efhemni.business@gmail.com</a></p>
+        <h3 id="contactUsTitle">7. Contact Us</h3>
+        <p id="contactUsIntro">If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+        <p id="contactEmail"><strong>Email:</strong> <a href="mailto:efhemni.business@gmail.com">efhemni.business@gmail.com</a></p>
 
     </main>
 
@@ -75,7 +75,135 @@
         <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const translations = {
+            ar: {
+                privacyTitle: "سياسة الخصوصية",
+                privacyIntro: "في إفهمني، نحن ملتزمون بحماية خصوصيتك وضمان التعامل مع معلوماتك الشخصية بطريقة آمنة ومسؤولة.",
+                infoWeCollectTitle: "١. المعلومات التي نجمعها",
+                infoWeCollectIntro: "عند التسجيل للحصول على حساب أو استخدام موقع إفهمني، قد نجمع المعلومات التالية:",
+                personalInfo: "معلومات التعريف الشخصية: الاسم، عنوان البريد الإلكتروني، اسم المستخدم، وكلمة المرور.",
+                usageData: "بيانات الاستخدام: معلومات حول كيفية تفاعلك مع الموقع، بما في ذلك الصفحات التي تمت زيارتها والإجراءات المتخذة.",
+                paymentInfo: "معلومات الدفع: إذا قمت بحجز جلسة، قد نجمع تفاصيل الدفع (تتم معالجتها من خلال بوابة دفع طرف ثالث).",
+                howWeUseInfoTitle: "٢. كيف نستخدم معلوماتك",
+                howWeUseInfoIntro: "نستخدم المعلومات التي نجمعها من أجل:",
+                provideServices: "تقديم وتحسين خدماتنا.",
+                authenticateUsers: "مصادقة المستخدمين والسماح بتسجيل الدخول.",
+                respondInquiries: "الرد على الاستفسارات وطلبات الدعم.",
+                processPayments: "معالجة المدفوعات للجلسات المحجوزة.",
+                sendPromotions: "إرسال مواد ترويجية أو تحديثات حول إفهمني (إذا اخترت تلقيها).",
+                dataSecurityTitle: "٣. أمان البيانات",
+                dataSecurityIntro: "نتخذ تدابير معقولة لحماية بياناتك الشخصية من الوصول غير المصرح به أو التغيير أو التدمير. ومع ذلك، لا توجد طريقة نقل عبر الإنترنت أو تخزين إلكتروني آمنة بنسبة 100٪، ولا يمكننا ضمان الأمان المطلق.",
+                yourRightsTitle: "٤. حقوقك",
+                yourRightsIntro: "لديك الحق في:",
+                accessUpdateInfo: "الوصول إلى معلوماتك الشخصية وتحديثها.",
+                requestDeletion: "طلب حذف حسابك وبياناتك الشخصية (مع مراعاة الالتزامات القانونية).",
+                optOutPromotions: "إلغاء الاشتراك في رسائل البريد الإلكتروني الترويجية أو النشرات الإخبارية في أي وقت.",
+                thirdPartyServicesTitle: "٥. خدمات الطرف الثالث",
+                thirdPartyServicesIntro: "قد نستخدم خدمات طرف ثالث، مثل معالجات الدفع وأدوات التحليل، التي قد تجمع وتستخدم البيانات وفقًا لسياسات الخصوصية الخاصة بها. نحن لا نتحكم في هذه الخدمات، ونشجعك على مراجعة سياسات الخصوصية الخاصة بها.",
+                changesPolicyTitle: "٦. تغييرات على سياسة الخصوصية هذه",
+                changesPolicyIntro: "قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس التغييرات في ممارساتنا أو المتطلبات القانونية. سيتم نشر أي تغييرات على هذه الصفحة مع تاريخ \"تاريخ السريان\" المحدث. يرجى مراجعة هذه الصفحة بشكل دوري للحصول على التحديثات.",
+                contactUsTitle: "٧. اتصل بنا",
+                contactUsIntro: "إذا كانت لديك أي أسئلة أو مخاوف بشأن سياسة الخصوصية هذه، يرجى الاتصال بنا على:",
+                contactEmail: "البريد الإلكتروني: efhemni.business@gmail.com"
+            },
+            fr: {
+                privacyTitle: "Politique de confidentialité",
+                privacyIntro: "Chez Efhemni, nous nous engageons à protéger votre vie privée et à garantir que vos informations personnelles sont traitées de manière sûre et responsable.",
+                infoWeCollectTitle: "1. Informations que nous collectons",
+                infoWeCollectIntro: "Lorsque vous vous inscrivez pour un compte ou utilisez le site Efhemni, nous pouvons collecter les informations suivantes :",
+                personalInfo: "Informations d'identification personnelle : nom, adresse e-mail, nom d'utilisateur et mot de passe.",
+                usageData: "Données d'utilisation : informations sur la façon dont vous interagissez avec le site, y compris les pages visitées et les actions effectuées.",
+                paymentInfo: "Informations de paiement : si vous réservez une session, nous pouvons collecter des détails de paiement (traités via une passerelle de paiement tierce).",
+                howWeUseInfoTitle: "2. Comment nous utilisons vos informations",
+                howWeUseInfoIntro: "Nous utilisons les informations que nous collectons pour :",
+                provideServices: "Fournir et améliorer nos services.",
+                authenticateUsers: "Authentifier les utilisateurs et permettre la connexion.",
+                respondInquiries: "Répondre aux demandes et aux demandes de support.",
+                processPayments: "Traiter les paiements pour les sessions réservées.",
+                sendPromotions: "Envoyer des documents promotionnels ou des mises à jour sur Efhemni (si vous choisissez de les recevoir).",
+                dataSecurityTitle: "3. Sécurité des données",
+                dataSecurityIntro: "Nous prenons des mesures raisonnables pour protéger vos données personnelles contre tout accès, altération ou destruction non autorisés. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est sécurisée à 100 %, et nous ne pouvons garantir une sécurité absolue.",
+                yourRightsTitle: "4. Vos droits",
+                yourRightsIntro: "Vous avez le droit de :",
+                accessUpdateInfo: "Accéder à vos informations personnelles et les mettre à jour.",
+                requestDeletion: "Demander la suppression de votre compte et de vos données personnelles (sous réserve des obligations légales).",
+                optOutPromotions: "Vous désinscrire des e-mails promotionnels ou des newsletters à tout moment.",
+                thirdPartyServicesTitle: "5. Services tiers",
+                thirdPartyServicesIntro: "Nous pouvons utiliser des services tiers, tels que des processeurs de paiement et des outils d'analyse, qui peuvent collecter et utiliser des données conformément à leurs politiques de confidentialité. Nous ne contrôlons pas ces services tiers, et nous vous encourageons à consulter leurs politiques de confidentialité.",
+                changesPolicyTitle: "6. Modifications de cette politique de confidentialité",
+                changesPolicyIntro: "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques ou les exigences légales. Toute modification sera publiée sur cette page avec une \"Date d'entrée en vigueur\" mise à jour. Veuillez consulter cette page périodiquement pour les mises à jour.",
+                contactUsTitle: "7. Contactez-nous",
+                contactUsIntro: "Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, veuillez nous contacter à :",
+                contactEmail: "E-mail : efhemni.business@gmail.com"
+            },
+            en: {
+                privacyTitle: "Privacy Policy",
+                privacyIntro: "At Efhemni, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.",
+                infoWeCollectTitle: "1. Information We Collect",
+                infoWeCollectIntro: "When you register for an account or use the Efhemni website, we may collect the following information:",
+                personalInfo: "Personal Identification Information: Name, email address, username, and password.",
+                usageData: "Usage Data: Information about how you interact with the website, including pages visited and actions taken.",
+                paymentInfo: "Payment Information: If you book a session, we may collect payment details (processed through a third-party payment gateway).",
+                howWeUseInfoTitle: "2. How We Use Your Information",
+                howWeUseInfoIntro: "We use the information we collect to:",
+                provideServices: "Provide and improve our services.",
+                authenticateUsers: "Authenticate users and allow login.",
+                respondInquiries: "Respond to inquiries and support requests.",
+                processPayments: "Process payments for booked sessions.",
+                sendPromotions: "Send promotional materials or updates about Efhemni (if you opt-in to receive them).",
+                dataSecurityTitle: "3. Data Security",
+                dataSecurityIntro: "We take reasonable measures to protect your personal data from unauthorized access, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.",
+                yourRightsTitle: "4. Your Rights",
+                yourRightsIntro: "You have the right to:",
+                accessUpdateInfo: "Access and update your personal information.",
+                requestDeletion: "Request deletion of your account and personal data (subject to legal obligations).",
+                optOutPromotions: "Opt-out of promotional emails or newsletters at any time.",
+                thirdPartyServicesTitle: "5. Third-Party Services",
+                thirdPartyServicesIntro: "We may use third-party services, such as payment processors and analytics tools, which may collect and use data in accordance with their privacy policies. We do not control these third-party services, and we encourage you to review their privacy policies.",
+                changesPolicyTitle: "6. Changes to This Privacy Policy",
+                changesPolicyIntro: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated \"Effective Date.\" Please review this page periodically for updates.",
+                contactUsTitle: "7. Contact Us",
+                contactUsIntro: "If you have any questions or concerns about this Privacy Policy, please contact us at:",
+                contactEmail: "Email: efhemni.business@gmail.com"
+            }
+        };
+
+        document.getElementById("translateToArabic").addEventListener("click", () => translatePage("ar"));
+        document.getElementById("translateToFrench").addEventListener("click", () => translatePage("fr"));
+        document.getElementById("translateToEnglish").addEventListener("click", () => translatePage("en"));
+
+        function translatePage(lang) {
+            document.getElementById("privacyTitle").textContent = translations[lang].privacyTitle;
+            document.getElementById("privacyIntro").textContent = translations[lang].privacyIntro;
+            document.getElementById("infoWeCollectTitle").textContent = translations[lang].infoWeCollectTitle;
+            document.getElementById("infoWeCollectIntro").textContent = translations[lang].infoWeCollectIntro;
+            document.getElementById("personalInfo").textContent = translations[lang].personalInfo;
+            document.getElementById("usageData").textContent = translations[lang].usageData;
+            document.getElementById("paymentInfo").textContent = translations[lang].paymentInfo;
+            document.getElementById("howWeUseInfoTitle").textContent = translations[lang].howWeUseInfoTitle;
+            document.getElementById("howWeUseInfoIntro").textContent = translations[lang].howWeUseInfoIntro;
+            document.getElementById("provideServices").textContent = translations[lang].provideServices;
+            document.getElementById("authenticateUsers").textContent = translations[lang].authenticateUsers;
+            document.getElementById("respondInquiries").textContent = translations[lang].respondInquiries;
+            document.getElementById("processPayments").textContent = translations[lang].processPayments;
+            document.getElementById("sendPromotions").textContent = translations[lang].sendPromotions;
+            document.getElementById("dataSecurityTitle").textContent = translations[lang].dataSecurityTitle;
+            document.getElementById("dataSecurityIntro").textContent = translations[lang].dataSecurityIntro;
+            document.getElementById("yourRightsTitle").textContent = translations[lang].yourRightsTitle;
+            document.getElementById("yourRightsIntro").textContent = translations[lang].yourRightsIntro;
+            document.getElementById("accessUpdateInfo").textContent = translations[lang].accessUpdateInfo;
+            document.getElementById("requestDeletion").textContent = translations[lang].requestDeletion;
+            document.getElementById("optOutPromotions").textContent = translations[lang].optOutPromotions;
+            document.getElementById("thirdPartyServicesTitle").textContent = translations[lang].thirdPartyServicesTitle;
+            document.getElementById("thirdPartyServicesIntro").textContent = translations[lang].thirdPartyServicesIntro;
+            document.getElementById("changesPolicyTitle").textContent = translations[lang].changesPolicyTitle;
+            document.getElementById("changesPolicyIntro").textContent = translations[lang].changesPolicyIntro;
+            document.getElementById("contactUsTitle").textContent = translations[lang].contactUsTitle;
+            document.getElementById("contactUsIntro").textContent = translations[lang].contactUsIntro;
+            document.getElementById("contactEmail").textContent = translations[lang].contactEmail;
+        }
+    </script>
     
 </body>
 </html>

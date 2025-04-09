@@ -8,6 +8,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="translation-buttons">
+        <button id="translateToArabic">العربية</button>
+        <button id="translateToFrench">Français</button>
+        <button id="translateToEnglish">English</button>
+    </div>
     <header>
         <h1>Efhemni!</h1>
         <nav>
@@ -24,13 +29,13 @@
     </header>
 
     <main>
-        <h2>Book a Session with a Psychologist</h2>
-        <p>Efhemni allows you to book an online session with a licensed psychologist for just 30DT per hour. These sessions are conducted online, ensuring you can get the help you need from the comfort of your home.</p>
+        <h2 id="bookingTitle">Book a Session with a Psychologist</h2>
+        <p id="bookingDescription">Efhemni allows you to book an online session with a licensed psychologist for just 30DT per hour. These sessions are conducted online, ensuring you can get the help you need from the comfort of your home.</p>
         
         <form id="bookingForm">
             <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
                 <div>
-                    <label for="psychologist">Select a Psychologist:</label>
+                    <label for="psychologist" id="psychologistLabel">Select a Psychologist:</label>
                     <select id="psychologist" name="psychologist" required>
                         <option value="" disabled selected>Select a psychologist</option>
                         <option value="Dr. Sarah Ben Ali" data-image="sarah.png">Dr. Sarah Ben Ali</option>
@@ -45,13 +50,13 @@
                 </div>
             </div>
 
-            <label for="date">Select a Date:</label>
+            <label for="date" id="dateLabel">Select a Date:</label>
             <input type="date" id="date" name="date" required>
             
-            <label for="time">Select a Time:</label>
+            <label for="time" id="timeLabel">Select a Time:</label>
             <input type="time" id="time" name="time" required>
             
-            <label for="payment">Payment Method:</label>
+            <label for="payment" id="paymentLabel">Payment Method:</label>
             <select id="payment" name="payment" required>
                 <option value="" disabled selected>Select a payment method</option>
                 <option value="credit-card">Credit Card</option>
@@ -60,7 +65,7 @@
             </select>
 
             <div id="paymentDetails" style="display: none; margin-top: 20px;">
-                <h3>Payment Details</h3>
+                <h3 id="paymentDetailsTitle">Payment Details</h3>
                 <div id="creditCardDetails" style="display: none;">
                     <label for="cardNumber">Card Number:</label>
                     <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number">
@@ -88,11 +93,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Efhemni. All rights reserved.</p>
+        <p>&copy; 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
     <script>
-        // Handle the psychologist selection and image preview
         const psychologistSelect = document.getElementById('psychologist');
         const psychologistImage = document.getElementById('psychologistImage');
 
@@ -108,7 +112,6 @@
             }
         });
 
-        // Handle payment method selection
         const paymentSelect = document.getElementById('payment');
         const paymentDetails = document.getElementById('paymentDetails');
         const creditCardDetails = document.getElementById('creditCardDetails');
@@ -119,15 +122,12 @@
         paymentSelect.addEventListener('change', (event) => {
             const selectedPayment = event.target.value;
 
-            // Show the payment details section
             paymentDetails.style.display = 'block';
 
-            // Hide all payment-specific fields initially
             creditCardDetails.style.display = 'none';
             paypalDetails.style.display = 'none';
             bankTransferDetails.style.display = 'none';
 
-            // Show the relevant payment-specific fields
             if (selectedPayment === 'credit-card') {
                 creditCardDetails.style.display = 'block';
             } else if (selectedPayment === 'paypal') {
@@ -136,14 +136,12 @@
                 bankTransferDetails.style.display = 'block';
             }
 
-            // Show the "Book Now" button
             bookNowButton.style.display = 'inline-block';
         });
 
-        // Handle the booking form submission
         const bookingForm = document.getElementById('bookingForm');
         bookingForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent form from refreshing the page
+            event.preventDefault();
             
             const psychologist = psychologistSelect.value;
             const date = document.getElementById('date').value;
@@ -156,6 +154,50 @@
                 alert('Please fill out all fields before booking.');
             }
         });
+
+        const translations = {
+            ar: {
+                bookingTitle: "احجز جلسة مع طبيب نفسي",
+                bookingDescription: "إفهمني يتيح لك حجز جلسة عبر الإنترنت مع طبيب نفسي مرخص مقابل 30 دينار/ساعة. تُجرى هذه الجلسات عبر الإنترنت لضمان راحتك.",
+                psychologistLabel: "اختر طبيبًا نفسيًا:",
+                dateLabel: "اختر تاريخًا:",
+                timeLabel: "اختر وقتًا:",
+                paymentLabel: "طريقة الدفع:",
+                paymentDetailsTitle: "تفاصيل الدفع"
+            },
+            fr: {
+                bookingTitle: "Réservez une session avec un psychologue",
+                bookingDescription: "Efhemni vous permet de réserver une session en ligne avec un psychologue agréé pour seulement 30DT par heure. Ces sessions sont effectuées en ligne pour garantir votre confort.",
+                psychologistLabel: "Sélectionnez un psychologue:",
+                dateLabel: "Sélectionnez une date:",
+                timeLabel: "Sélectionnez une heure:",
+                paymentLabel: "Méthode de paiement:",
+                paymentDetailsTitle: "Détails du paiement"
+            },
+            en: {
+                bookingTitle: "Book a Session with a Psychologist",
+                bookingDescription: "Efhemni allows you to book an online session with a licensed psychologist for just 30DT per hour. These sessions are conducted online, ensuring you can get the help you need from the comfort of your home.",
+                psychologistLabel: "Select a Psychologist:",
+                dateLabel: "Select a Date:",
+                timeLabel: "Select a Time:",
+                paymentLabel: "Payment Method:",
+                paymentDetailsTitle: "Payment Details"
+            }
+        };
+
+        document.getElementById("translateToArabic").addEventListener("click", () => translatePage("ar"));
+        document.getElementById("translateToFrench").addEventListener("click", () => translatePage("fr"));
+        document.getElementById("translateToEnglish").addEventListener("click", () => translatePage("en"));
+
+        function translatePage(lang) {
+            document.getElementById("bookingTitle").textContent = translations[lang].bookingTitle;
+            document.getElementById("bookingDescription").textContent = translations[lang].bookingDescription;
+            document.getElementById("psychologistLabel").textContent = translations[lang].psychologistLabel;
+            document.getElementById("dateLabel").textContent = translations[lang].dateLabel;
+            document.getElementById("timeLabel").textContent = translations[lang].timeLabel;
+            document.getElementById("paymentLabel").textContent = translations[lang].paymentLabel;
+            document.getElementById("paymentDetailsTitle").textContent = translations[lang].paymentDetailsTitle;
+        }
     </script>
 </body>
 </html>

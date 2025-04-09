@@ -9,6 +9,11 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="translation-buttons">
+        <button id="translateToArabic">العربية</button>
+        <button id="translateToFrench">Français</button>
+        <button id="translateToEnglish">English</button>
+    </div>
     <header>
         <h1>Efhemni!</h1>
         <nav>
@@ -25,25 +30,54 @@
         </nav>
     </header>
     
-    
-    
     <main>
-        <h2>Login to Your Account</h2>
+        <h2 id="loginTitle">Login to Your Account</h2>
         <form id="loginForm">
-            <label for="loginUsername">Username</label><br>
+            <label for="loginUsername" id="usernameLabel">Username</label><br>
             <input type="text" id="loginUsername" name="loginUsername" required><br><br>
         
-            <label for="loginPassword">Password</label><br> 
+            <label for="loginPassword" id="passwordLabel">Password</label><br> 
             <input type="password" id="loginPassword" name="loginPassword" required><br><br>
         
-            <button type="submit">Login</button>
+            <button type="submit" id="loginButton">Login</button>
         </form>
-        
     </main>
     
     <footer>
         <p>&copy; 2025 Efhemni!</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        const translations = {
+            ar: {
+                loginTitle: "تسجيل الدخول إلى حسابك",
+                usernameLabel: "اسم المستخدم",
+                passwordLabel: "كلمة المرور",
+                loginButton: "تسجيل الدخول"
+            },
+            fr: {
+                loginTitle: "Connectez-vous à votre compte",
+                usernameLabel: "Nom d'utilisateur",
+                passwordLabel: "Mot de passe",
+                loginButton: "Connexion"
+            },
+            en: {
+                loginTitle: "Login to Your Account",
+                usernameLabel: "Username",
+                passwordLabel: "Password",
+                loginButton: "Login"
+            }
+        };
+
+        document.getElementById("translateToArabic").addEventListener("click", () => translatePage("ar"));
+        document.getElementById("translateToFrench").addEventListener("click", () => translatePage("fr"));
+        document.getElementById("translateToEnglish").addEventListener("click", () => translatePage("en"));
+
+        function translatePage(lang) {
+            document.getElementById("loginTitle").textContent = translations[lang].loginTitle;
+            document.getElementById("usernameLabel").textContent = translations[lang].usernameLabel;
+            document.getElementById("passwordLabel").textContent = translations[lang].passwordLabel;
+            document.getElementById("loginButton").textContent = translations[lang].loginButton;
+        }
+    </script>
 </body>
 </html>

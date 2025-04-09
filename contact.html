@@ -8,7 +8,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+    <div class="translation-buttons">
+        <button id="translateToArabic">العربية</button>
+        <button id="translateToFrench">Français</button>
+        <button id="translateToEnglish">English</button>
+    </div>
     <header>
         <h1>Efhemni!</h1>
         <nav>
@@ -26,20 +30,58 @@
     </header>
 
     <main>
-        <h2>Contact Us</h2>
-        <p>If you have any concerns, questions, or feedback, feel free to reach out to us via email. We value your input and are here to assist you with any inquiries.</p>
-
-        <h3>Email Us:</h3>
-        <p>You can send an email directly to <a href="mailto:efhemni.business@gmail.com">efhemni.business@gmail.com</a> for any concerns or queries regarding the platform.</p>
-
-        <h3>Our Team</h3>
-        <p>We have a dedicated team of professionals who are available to answer your questions. Whether you're seeking technical support or mental health resources, we're here to help.</p>
+        <h2 id="contactTitle">Contact Us</h2>
+        <p id="contactDescription">If you have any concerns, questions, or feedback, feel free to reach out to us via email. We value your input and are here to assist you with any inquiries.</p>
+        <h3 id="emailUsTitle">Email Us:</h3>
+        <p id="emailUsDescription">You can send an email directly to <a href="mailto:efhemni.business@gmail.com">efhemni.business@gmail.com</a> for any concerns or queries regarding the platform.</p>
+        <h3 id="ourTeamTitle">Our Team</h3>
+        <p id="ourTeamDescription">We have a dedicated team of professionals who are available to answer your questions. Whether you're seeking technical support or mental health resources, we're here to help.</p>
     </main>
 
     <footer>
-        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const translations = {
+            ar: {
+                contactTitle: "اتصل بنا",
+                contactDescription: "إذا كانت لديك أي استفسارات أو ملاحظات، لا تتردد في التواصل معنا عبر البريد الإلكتروني.",
+                emailUsTitle: "راسلنا عبر البريد الإلكتروني:",
+                emailUsDescription: "يمكنك إرسال بريد إلكتروني مباشرة إلى efhemni.business@gmail.com لأي استفسارات أو ملاحظات.",
+                ourTeamTitle: "فريقنا",
+                ourTeamDescription: "لدينا فريق متخصص متاح للإجابة على أسئلتك. سواء كنت تبحث عن دعم تقني أو موارد للصحة النفسية، نحن هنا لمساعدتك."
+            },
+            fr: {
+                contactTitle: "Contactez-nous",
+                contactDescription: "Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter par e-mail.",
+                emailUsTitle: "Envoyez-nous un e-mail:",
+                emailUsDescription: "Vous pouvez envoyer un e-mail directement à efhemni.business@gmail.com pour toute question ou commentaire.",
+                ourTeamTitle: "Notre équipe",
+                ourTeamDescription: "Nous avons une équipe dédiée de professionnels disponibles pour répondre à vos questions. Que vous recherchiez un support technique ou des ressources en santé mentale, nous sommes là pour vous aider."
+            },
+            en: {
+                contactTitle: "Contact Us",
+                contactDescription: "If you have any concerns, questions, or feedback, feel free to reach out to us via email. We value your input and are here to assist you with any inquiries.",
+                emailUsTitle: "Email Us:",
+                emailUsDescription: "You can send an email directly to efhemni.business@gmail.com for any concerns or queries regarding the platform.",
+                ourTeamTitle: "Our Team",
+                ourTeamDescription: "We have a dedicated team of professionals who are available to answer your questions. Whether you're seeking technical support or mental health resources, we're here to help."
+            }
+        };
+
+        document.getElementById("translateToArabic").addEventListener("click", () => translatePage("ar"));
+        document.getElementById("translateToFrench").addEventListener("click", () => translatePage("fr"));
+        document.getElementById("translateToEnglish").addEventListener("click", () => translatePage("en"));
+
+        function translatePage(lang) {
+            document.getElementById("contactTitle").textContent = translations[lang].contactTitle;
+            document.getElementById("contactDescription").textContent = translations[lang].contactDescription;
+            document.getElementById("emailUsTitle").textContent = translations[lang].emailUsTitle;
+            document.getElementById("emailUsDescription").textContent = translations[lang].emailUsDescription;
+            document.getElementById("ourTeamTitle").textContent = translations[lang].ourTeamTitle;
+            document.getElementById("ourTeamDescription").textContent = translations[lang].ourTeamDescription;
+        }
+    </script>
 </body>
 </html>

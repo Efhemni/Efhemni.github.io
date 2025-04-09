@@ -8,7 +8,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+    <div class="translation-buttons">
+        <button id="translateToArabic">العربية</button>
+        <button id="translateToFrench">Français</button>
+        <button id="translateToEnglish">English</button>
+    </div>
     <header>
         <h1>Efhemni!</h1>
         <nav>
@@ -26,10 +30,9 @@
     </header>
 
     <main>
-        <h2>Welcome to Efhemni!</h2>
-        <p>Your go-to platform for mental well-being. We offer a safe space for university students to anonymously share their thoughts, concerns, and experiences related to their mental health. You can also book one-on-one sessions with licensed psychiatrists to get professional help.</p>
-        
-        <p>Our mission is to provide a supportive and understanding community for students navigating the challenges of university life. Whether you're struggling with stress, anxiety, or just need someone to talk to, Efhemni is here to help.</p>
+        <h2 id="homeWelcome">Welcome to Efhemni!</h2>
+        <p id="homeDescription">Your go-to platform for mental well-being. We offer a safe space for university students to anonymously share their thoughts, concerns, and experiences related to their mental health. You can also book one-on-one sessions with licensed psychiatrists to get professional help.</p>
+        <p id="homeMission">Our mission is to provide a supportive and understanding community for students navigating the challenges of university life. Whether you're struggling with stress, anxiety, or just need someone to talk to, Efhemni is here to help.</p>
 
         <div id="bookingSection" style="display:none;">
             <h3>Book a Session with a Psychiatrist</h3>
@@ -40,10 +43,37 @@
     </main>
 
     <footer>
-        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <script src="script.js"></script>
-    
+    <script>
+        const translations = {
+            ar: {
+                homeWelcome: "مرحبًا بك في إفهمني!",
+                homeDescription: "منصتك المفضلة للرفاهية النفسية. نقدم مساحة آمنة لطلاب الجامعات لمشاركة أفكارهم ومخاوفهم وتجاربهم المتعلقة بصحتهم النفسية. يمكنك أيضًا حجز جلسات فردية مع أطباء نفسيين مرخصين للحصول على المساعدة المهنية.",
+                homeMission: "مهمتنا هي توفير مجتمع داعم ومتفهم للطلاب الذين يواجهون تحديات الحياة الجامعية. سواء كنت تعاني من التوتر أو القلق أو تحتاج فقط إلى شخص للتحدث معه، فإن إفهمني هنا لمساعدتك."
+            },
+            fr: {
+                homeWelcome: "Bienvenue sur Efhemni!",
+                homeDescription: "Votre plateforme de référence pour le bien-être mental. Nous offrons un espace sûr pour que les étudiants universitaires partagent leurs pensées, préoccupations et expériences liées à leur santé mentale. Vous pouvez également réserver des séances individuelles avec des psychiatres agréés pour obtenir une aide professionnelle.",
+                homeMission: "Notre mission est de fournir une communauté solidaire et compréhensive pour les étudiants confrontés aux défis de la vie universitaire. Que vous soyez stressé, anxieux ou que vous ayez simplement besoin de parler à quelqu'un, Efhemni est là pour vous aider."
+            },
+            en: {
+                homeWelcome: "Welcome to Efhemni!",
+                homeDescription: "Your go-to platform for mental well-being. We offer a safe space for university students to anonymously share their thoughts, concerns, and experiences related to their mental health. You can also book one-on-one sessions with licensed psychiatrists to get professional help.",
+                homeMission: "Our mission is to provide a supportive and understanding community for students navigating the challenges of university life. Whether you're struggling with stress, anxiety, or just need someone to talk to, Efhemni is here to help."
+            }
+        };
+
+        document.getElementById("translateToArabic").addEventListener("click", () => translatePage("ar"));
+        document.getElementById("translateToFrench").addEventListener("click", () => translatePage("fr"));
+        document.getElementById("translateToEnglish").addEventListener("click", () => translatePage("en"));
+
+        function translatePage(lang) {
+            document.getElementById("homeWelcome").textContent = translations[lang].homeWelcome;
+            document.getElementById("homeDescription").textContent = translations[lang].homeDescription;
+            document.getElementById("homeMission").textContent = translations[lang].homeMission;
+        }
+    </script>
 </body>
 </html>

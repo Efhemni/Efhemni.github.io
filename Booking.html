@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking - Efhemni</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -15,8 +15,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="register.html" id="registerLink">Register</a></li>
-                <li><a href="login.html" id="loginLink">Login</a></li>
+                <li><a href="post.html" id="postNav">Post</a></li>
+                <li><a href="register.html" id="registerLink" style="display:none;">Register</a></li>
+                <li><a href="login.html" id="loginLink" style="display:none;">Login</a></li>
                 <li><a href="#" id="logoutButton" style="display:none;">Logout</a></li>
             </ul>
         </nav>
@@ -26,7 +27,6 @@
         <h2>Book a Session with a Psychologist</h2>
         <p>Efhemni allows you to book an online session with a licensed psychologist for just 30DT per hour. These sessions are conducted online, ensuring you can get the help you need from the comfort of your home.</p>
         
-        <!-- Booking Form -->
         <form id="bookingForm">
             <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
                 <div>
@@ -40,7 +40,6 @@
                     </select>
                 </div>
 
-                <!-- Psychologist Image Preview -->
                 <div id="psychologistPreview">
                     <img id="psychologistImage" src="" alt="Psychologist Preview" style="width: 150px; height: 150px; display: none; border-radius: 10px; object-fit: cover;">
                 </div>
@@ -60,7 +59,6 @@
                 <option value="bank-transfer">Bank Transfer</option>
             </select>
 
-            <!-- Payment Details Section -->
             <div id="paymentDetails" style="display: none; margin-top: 20px;">
                 <h3>Payment Details</h3>
                 <div id="creditCardDetails" style="display: none;">

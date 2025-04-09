@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - Efhemni!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Efhemni!</h1>
+        <nav>
+            <ul style="display: flex; align-items: center; gap: 10px;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Booking.html" id="bookingNav">Booking</a></li>
+                <li><a href="post.html" id="postNav">Post</a></li>
+                <li><a href="register.html" id="registerLink" style="display:none;">Register</a></li>
+                <li><a href="login.html" id="loginLink" style="display:none;">Login</a></li>
+                <li><a href="#" id="logoutButton" style="display:none;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Community Posts</h2>
+        <div id="postsSection">
+            <h3>Previous Posts</h3>
+            <div class="post">
+                <p><strong>Anonymous:</strong> I'm feeling overwhelmed with exams. Any tips to manage stress?</p>
+            </div>
+            <div class="post">
+                <p><strong>Sarah:</strong> Remember to take breaks and stay hydrated. You can do this!</p>
+            </div>
+            <div class="post">
+                <p><strong>Ahmed:</strong> Meditation has helped me a lot. Try it out!</p>
+            </div>
+        </div>
+
+        <h3>Share Your Thoughts</h3>
+        <form id="postForm">
+            <label for="username">Name (optional):</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name (or leave blank for anonymous)">
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+            
+            <button type="submit">Post</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Efhemni. All rights reserved. | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

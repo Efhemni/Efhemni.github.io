@@ -79,67 +79,83 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+
+
+    const postForm = document.getElementById("postForm");
+    const postsSection = document.getElementById("postsSection");
+
+    if (postForm) {
+        postForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const username = document.getElementById("username").value.trim() || "Anonymous";
+            const message = document.getElementById("message").value.trim();
+
+            if (message) {
+
+                const newPost = document.createElement("div");
+                newPost.classList.add("post");
+                newPost.innerHTML = `<p><strong>${username}:</strong> ${message}</p>`;
+
+
+                postsSection.appendChild(newPost);
+
+
+                postForm.reset();
+            } else {
+                alert("Please enter a message before posting.");
+            }
+        });
+    }
 });
 
 
-// Check if the user is logged in by checking sessionStorage
-window.onload = function() {
-    const userName = sessionStorage.getItem('userName'); // Get the stored username from sessionStorage
 
-    // If the user is logged in
+window.onload = function() {
+    const userName = sessionStorage.getItem('userName');
+
     if (userName) {
-        // Show the logged-in user's name
         document.getElementById('userNameDisplay').textContent = `Welcome, ${userName}`;
 
-        // Hide Register and Login buttons
         document.getElementById('registerLink').style.display = 'none';
         document.getElementById('loginLink').style.display = 'none';
 
-        // Show the logout button
         document.getElementById('logoutButton').style.display = 'inline';
 
-        // Show the booking section
         document.getElementById('bookingSection').style.display = 'block';
     } else {
-        // If the user is not logged in, hide the booking section
         document.getElementById('bookingSection').style.display = 'none';
     }
 
-    // Logout functionality
     document.getElementById('logoutButton').addEventListener('click', function() {
-        // Clear sessionStorage on logout
         sessionStorage.clear();
-        // Reload the page to reflect the changes
         location.reload();
     });
 };
 
 
 
-// Check if the user is logged in by checking sessionStorage
-window.onload = function() {
-    const userName = sessionStorage.getItem('userName'); // Get the stored username from sessionStorage
 
-    // If the user is logged in
+window.onload = function() {
+    const userName = sessionStorage.getItem('userName'); 
+
+   
     if (userName) {
-        // Show the logged-in user's name
+        
         document.getElementById('userNameDisplay').textContent = `Welcome, ${userName}`;
 
-        // Hide Register and Login buttons
+       
         document.getElementById('registerLink').style.display = 'none';
         document.getElementById('loginLink').style.display = 'none';
 
-        // Show the logout button
+        
         document.getElementById('logoutButton').style.display = 'inline';
 
-        // Show the booking section
-        document.getElementById('bookingSection').style.display = 'block';
+                document.getElementById('bookingSection').style.display = 'block';
     } else {
-        // If the user is not logged in, hide the booking section
-        document.getElementById('bookingSection').style.display = 'none';
+                document.getElementById('bookingSection').style.display = 'none';
     }
 
-    // Logout functionality
+    
     
     };
 ;

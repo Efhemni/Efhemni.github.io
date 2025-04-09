@@ -140,10 +140,6 @@ window.onload = function() {
     }
 
     // Logout functionality
-    document.getElementById('logoutButton').addEventListener('click', function() {
-        // Clear sessionStorage on logout
-        sessionStorage.clear();
-        // Reload the page to reflect the changes
-        location.reload();
-    });
-};
+    
+    };
+;
